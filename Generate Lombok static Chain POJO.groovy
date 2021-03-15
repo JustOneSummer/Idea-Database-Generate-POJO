@@ -52,6 +52,8 @@ def generate(out, className, fields) {
     out.println "import lombok.Getter;"
     out.println "import lombok.Setter;"
     out.println "import lombok.ToString;"
+    out.println "import lombok.RequiredArgsConstructor;"
+    out.println "import lombok.experimental.Accessors;"
     out.println ""
     out.println "/**"
     out.println " * @author $USER_NAME"
@@ -61,6 +63,8 @@ def generate(out, className, fields) {
     out.println "@Getter"
     out.println "@Setter"
     out.println "@ToString"
+    out.println "@Accessors(chain = true)"
+    out.println "@RequiredArgsConstructor(staticName = \"of\")"
     out.println "public class $className {"
     out.println ""
     fields.each() {
