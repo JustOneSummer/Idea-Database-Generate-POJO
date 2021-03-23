@@ -64,7 +64,7 @@ def generate(out, className, sqlTableComment, sqlTableName, fields) {
     out.println "import com.baomidou.mybatisplus.annotation.IdType;"
     out.println "import com.baomidou.mybatisplus.annotation.TableId;"
     out.println "import com.baomidou.mybatisplus.annotation.TableName;"
-    out.println "import om.baomidou.mybatisplus.core.conditions.query.QueryWrapper;"
+    out.println "import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;"
     if (JSON_UTILS_PACKAGE != "") {
         out.println "import $JSON_UTILS_PACKAGE"
     }
@@ -116,14 +116,13 @@ def generate(out, className, sqlTableComment, sqlTableName, fields) {
         out.println "        return JsonUtils.toJson(this);"
         out.println "    }"
     }
-    out.println "    }"
     out.println ""
     out.println "    /**"
     out.println "     * to {@linkplain QueryWrapper}"
     out.println "     *"
     out.println "     * @return {@linkplain QueryWrapper<${className}>}"
     out.println "     */"
-    out.println "    public QueryWrapper<${className}> to${className}() {"
+    out.println "    public QueryWrapper<${className}> toQueryWrapper() {"
     out.println "        return new QueryWrapper<>(this);"
     out.println "    }"
     out.println ""
