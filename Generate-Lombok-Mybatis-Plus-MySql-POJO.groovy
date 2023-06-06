@@ -30,8 +30,6 @@ typeMapping = [
 
 //生成类名称
 USER_NAME = "Xun"
-//邮箱
-EMAIL = "me@shinoaki.link"
 LOCAL_DATE_TIME = LocalDateTime.now(ZoneId.systemDefault())
 WEEK_DAY = LOCAL_DATE_TIME.getDayOfWeek().value
 DATE_TIME = LOCAL_DATE_TIME.format(DateTimeFormatter.ofPattern("yyyy/MM/dd"))
